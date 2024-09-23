@@ -17,6 +17,6 @@ const memorySchema = new mongoose.Schema({
 });
 
 
-const memory = mongoose.model('Memory' , memorySchema);
+const Memory = mongoose.model('Memory' , memorySchema);
 
-export default memory; //exporting the model to be used in the controller
+export default Memory; //exporting the model to be used in the controller
