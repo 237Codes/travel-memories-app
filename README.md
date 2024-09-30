@@ -1,4 +1,4 @@
-# Welcome to my Travel Memories Project Tutorial
+# Welcome to my Travel Memories Project 
 
 ## Motivation:
 I decided to create this app to visiualize my memories of the travel destinations I have visited.
