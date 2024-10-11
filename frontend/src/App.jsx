@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Box } from "@chakra-ui/react";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import CreatePage from "./pages/CreatePage";
 import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 function App() {
 
   return (
-    <Box minH={"100vh"} >
+    <Box minH={"100vh"} bg={useColorModeValue("gray.100", "gray.900")} >
        {/* // Navbar goes above the routes because we want to make it appear on all pages  */}
       <Navbar/> 
       <Routes>
