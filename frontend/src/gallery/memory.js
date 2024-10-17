@@ -7,7 +7,13 @@ export const useMemoryGallery = create((set) => ({
       if (!newMemory.location || !newMemory.image || newMemory.month) {
          return {success:false, message: "Please fill in all fields."};
       }
-      const res = await fetch("/api/memories")
+      const res = await fetch("/api/memories", {
+         method:"POST",
+         headers:{
+            "Content-Type":"application/json",
+         },
+      })
+   
    }
    
 }));
