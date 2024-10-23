@@ -12,7 +12,7 @@ export const useMemoryGallery = create((set) => ({
          headers:{
             "Content-Type":"application/json",
          },
-         body: JSON.stringify(newMemory),
+        
       })
    
    }
