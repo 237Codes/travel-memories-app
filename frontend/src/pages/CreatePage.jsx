@@ -1,5 +1,6 @@
 import { Box, Button, Container, Heading, Input, useColorModeValue, useToast, VStack } from "@chakra-ui/react";
 import {useState} from 'react'
+import { useMemoryGallery } from "../gallery/memory.js"
 
 const CreatePage = () => {
   const [newMemory, setNewMemory] = useState({
@@ -9,9 +10,12 @@ const CreatePage = () => {
 });
 const toast = useToast();
 
+const { createMemory } = useMemoryGallery();
 
 const handleAddMemory = async () => {
-  console.log("Memory added", newMemory);
+  const {success,message} = await createMemory(newMemory);
+  console.log("success:",success)
+  console.log("message:",message)
   // const { success, message } = await createMemory(newMemory);
   // if (!success) {
   //   toast({
