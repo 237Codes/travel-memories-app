@@ -12,7 +12,7 @@ export const getMemory = async (req, res) => {
 };
 
 export const createMemory = async (req, res) => {
-    const memory = req.body; //user will send data
+    const memory = req.body; //user will send this data
     if (!memory.location || !memory.month || !memory.image) {
         return res.status(400).json({ succes:false , message: "Please provide all fields "});
     }

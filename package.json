@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/237Codes/travel-memories-app#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "mongodb": "^6.9.0",
@@ -26,6 +27,7 @@
     "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "nodemon": "^3.1.7"
   }
 }
