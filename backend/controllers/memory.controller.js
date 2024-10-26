@@ -7,14 +7,14 @@ export const getMemory = async (req, res) => {
         res.status(200).json ({success: true, data: memories});
     } catch (error) {
         console.log("Error in fetching memories:", error.message);
-        res.status(500).json({ success: false, message: "Server error" });
+        res.status(500).json({ success: false, message: "Server Error" });
     }
-}
+};
 
 export const createMemory = async (req, res) => {
     const memory = req.body; //user will send data
     if (!memory.location || !memory.month || !memory.image) {
-        res.status(400).json({ succes:false , message: "Please provide all fields "});
+        return res.status(400).json({ succes:false , message: "Please provide all fields "});
     }
     const newMemory = new Memory(memory);
  
@@ -23,7 +23,7 @@ export const createMemory = async (req, res) => {
         res.status(201).json({ success: true, data: newMemory });
     }catch (error) {
         console.error("Error in creating memory:", error.message);
-          res.status(500).json({ success: false, message: "Server error" });
+          res.status(500).json({ success: false, message: "Server Error" });
     }
  }
 
