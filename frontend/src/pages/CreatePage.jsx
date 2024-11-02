@@ -14,25 +14,25 @@ const { createMemory } = useMemoryGallery();
 
 const handleAddMemory = async () => {
   const {success,message} = await createMemory(newMemory);
-  console.log("success:",success)
-  console.log("message:",message)
-  // const { success, message } = await createMemory(newMemory);
-  // if (!success) {
-  //   toast({
-  //     title: "Error",
-  //     description: message,
-  //     status: "error",
-  //     isClosable: true,
-  //   });
-  // } else {
-  //   toast({
-  //     title: "Success",
-  //     description: message,
-  //     status: "success",
-  //     isClosable: true,
-  //   });
-  // }
-  // setNewMemory({ location: "", month: "", image: "" });
+  // console.log("success:",success)
+  // console.log("message:",message)
+  
+  if (!success) {     // Notify user if memory was created succesfully
+    toast({
+      title: "Error",
+      description: message,
+      status: "error",
+      isClosable: true,   // Enables us to be able to close the notification
+    });
+  } else {
+    toast({
+      title: "Success",
+      description: message,
+      status: "success",
+      isClosable: true,
+    });
+  }
+  setNewMemory({ location: "", month: "", image: "" });
 };
   return (
     <Container maxW= {"container.sm"}>
