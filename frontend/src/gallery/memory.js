@@ -3,12 +3,13 @@ import {create} from "zustand";
 export const useMemoryGallery = create((set) => ({ 
    memories: [],
    setMemories: (memories) => set({memories}),
+
    createMemory: async (newMemory) => {
       if (!newMemory.location || !newMemory.image || !newMemory.month) {
          return {success:false, message: "Please fill in all fields."};
       }
       try {
-         const res = await fetch("http://localhost:8000/api/memories", {
+         const res = await fetch("/api/memories", {
             method:"POST",
             headers: {
                "Content-Type": "application/json",
@@ -24,6 +25,7 @@ export const useMemoryGallery = create((set) => ({
       // set((state) => ({memories: [...state.memories, data.data] }));
       // return {success:true, message: "Memory added successfully. "};
    },
+   
    // create fetchMemories function to send request 
    fetchMemories: async () => {
 		const res = await fetch("/api/memories");   // API endpoint appears inside the fetch
@@ -35,7 +37,7 @@ export const useMemoryGallery = create((set) => ({
    // pid refers tro me memory id from the database
 
    deleteMemory: async (pid) => {
-		const res = await fetch(`http://localhost:8000/api/memories/${pid}`, {
+		const res = await fetch(`/api/memories/${pid}`, {
 			method: "DELETE",
 		});
 		const data = await res.json();
@@ -49,7 +51,7 @@ export const useMemoryGallery = create((set) => ({
    // Create functionto update memories
 
    updateMemory: async (pid, updatedMemory) => {
-		const res = await fetch(`http://localhost:8000/api/memories/${pid}`, {
+		const res = await fetch(`/api/memories/${pid}`, {
 			method: "PUT",
 			headers: {
 				"Content-Type": "application/json",
