@@ -28,19 +28,19 @@ I hope you enjoy exploring it.
 
 Details of features here...
 
-## Create Travel Entries
+### Create Travel Entries
 
 Subsection content for creating entries...
 
-## View Travel Memories
+### View Travel Memories
 
 Subsection content for viewing memories...
 
-## Update Travel Memory
+### Update Travel Memory
 
 Subsection content for updating travel memory...
 
-## Delete Travel Memory
+### Delete Travel Memory
 
 Subsection content for Deleting Travel Memory...
 
