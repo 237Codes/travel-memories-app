@@ -2,8 +2,7 @@
 ![alt text](frontend/public/Travel_Memories_App.png)
 
 
-# Welcome to Travel Memories App
-
+## Your digital travel journal starts here!
 ## Introduction 
 
 Travel Memories App is a web application designed to let users capture their travel experiences. 
