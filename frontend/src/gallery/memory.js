@@ -30,4 +30,41 @@ export const useMemoryGallery = create((set) => ({
 		const data = await res.json();
 		set({ memories: data.data });
 	},
+
+   // create function to delete memories
+   // pid refers tro me memory id from the database
+
+   deleteMemory: async (pid) => {
+		const res = await fetch(`http://localhost:8000/api/memories/${pid}`, {
+			method: "DELETE",
+		});
+		const data = await res.json();
+		if (!data.success) return { success: false, message: data.message };
+
+		// update the ui immediately, without needing a refresh
+		set((state) => ({ memories: state.memories.filter((memory) => memory._id !== pid) }));
+		return { success: true, message: data.message };
+	},
+
+   // Create functionto update memories
+
+   updateMemory: async (pid, updatedMemory) => {
+		const res = await fetch(`http://localhost:8000/api/memories/${pid}`, {
+			method: "PUT",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(updatedMemory),
+		});
+		const data = await res.json();
+		if (!data.success) return { success: false, message: data.message };
+
+		// update the ui immediately, without needing a refresh
+		set((state) => ({
+			memories: state.memories.map((memory) => (memory._id === pid ? data.data : memory)),
+		}));
+
+		return { success: true, message: data.message };
+	},
+
 }));

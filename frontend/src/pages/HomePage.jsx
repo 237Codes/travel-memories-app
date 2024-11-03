@@ -3,7 +3,7 @@ import { Container, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useMemoryGallery } from "../gallery/memory";
-//import memoryCard from "../components/memoryCard";
+import MemoryCard from "../components/MemoryCard";
 
 const HomePage = () => {
 	const { fetchMemories, memories } = useMemoryGallery();
@@ -12,7 +12,7 @@ const HomePage = () => {
 		fetchMemories();
 	}, [fetchMemories]);
 	console.log("memories", memories);
-
+  
 	return (
 		<Container maxW='container.xl' py={12}>
 			<VStack spacing={8}>
@@ -23,7 +23,7 @@ const HomePage = () => {
 					bgClip={"text"}
 					textAlign={"center"}
 				>
-					Current Memories 🚀
+					Current Memories ✈️
 				</Text>
 
 				<SimpleGrid
@@ -36,7 +36,7 @@ const HomePage = () => {
 					w={"full"}
 				>
 					{memories.map((memory) => (
-						<memoryCard key={memory._id} memory={memory} />
+						<MemoryCard key={memory._id} memory={memory} />
 					))}
 				</SimpleGrid>
 
