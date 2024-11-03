@@ -26,7 +26,7 @@ export const useMemoryGallery = create((set) => ({
    },
    // create fetchMemories function to send request 
    fetchMemories: async () => {
-		const res = await fetch("http://localhost:8000/api/memories");   // API endpoint appears inside the fetch
+		const res = await fetch("/api/memories");   // API endpoint appears inside the fetch
 		const data = await res.json();
 		set({ memories: data.data });
 	},

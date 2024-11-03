@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 8000;
 const __dirname = path.resolve()
 
 app.use(express.json()); //allows us to parse or accept json data in the reuest.body
-app.use(cors({ origin: 'http://localhost:8000' }));
+app.use(cors({ origin: 'https://travel-memories-app.onrender.com' }));
 app.use("/api/memories", memoryRoutes); // This will call the functions inside the memory.routes.js file
 
 if(process.env.NODE_ENV === "production") {
