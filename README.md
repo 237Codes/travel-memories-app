@@ -27,7 +27,7 @@ I hope you enjoy exploring it.
 
 Details of features here...
 
-### Create Travel Entries
+<!-- ### Create Travel Entries
 
 Subsection content for creating entries...
 
@@ -41,7 +41,7 @@ Subsection content for updating travel memory...
 
 ### Delete Travel Memory
 
-Subsection content for Deleting Travel Memory...
+Subsection content for Deleting Travel Memory... -->
 
 # Demo
 
