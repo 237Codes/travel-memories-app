@@ -4,7 +4,11 @@
 
 # Welcome to Travel Memories App
 
-## This app is designed to save your favorite travel memories and display them for you with pictures of your favorite destinations. I hope you enjoy exploring it.
+## Introduction 
+
+Travel Memories App is a web application designed to let users capture their travel experiences. 
+Users can create entries for various trips, attach photos, and add locations, enabling them to keep a digital travel journal.
+I hope you enjoy exploring it.
 
 
 
