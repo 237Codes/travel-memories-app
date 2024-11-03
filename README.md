@@ -2,7 +2,8 @@
 ![alt text](frontend/public/Travel_Memories_App.png)
 
 
-## Your digital travel journal starts here!
+## Your digital travel journal starts here! - [Live Preview](https://travel-memories-app.onrender.com)
+
 ## Introduction 
 
 Travel Memories App is a web application designed to let users capture their travel experiences. 
