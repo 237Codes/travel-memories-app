@@ -1,3 +1,5 @@
+
+![alt text](frontend/public/Travel_Memories_App.png)
 # Welcome to my Travel Memories Project 
 
 ## Motivation:
