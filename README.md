@@ -12,10 +12,10 @@ I hope you enjoy exploring it.
 ## Table of Contents
 
 - [Features](#features)
-  - [Create Entries](#create-entries)
+  <!-- - [Create Entries](#create-entries)
   - [View Memories](#view-memories)
   - [Edit Memories](#edit-memory)
-  - [Delete Memories](#delete-memory)
+  - [Delete Memories](#delete-memory) -->
 - [Demo](#demo)
 - [Installation](#installation)
 - [Contributing](#contributing)
